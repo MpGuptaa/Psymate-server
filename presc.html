@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prescription</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+      html {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .header {
+        font-size: 30px;
+        border-bottom: 2px solid #f8b133;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        /* width: 100%; */
+
+        /* margin-bottom: 100px; */
+      }
+
+      .footer {
+        color: rgb(8, 6, 6);
+        text-align: center;
+        background-color: rgb(218, 216, 214);
+        padding: 10px;
+      }
+
+      .position {
+        display: flex;
+        justify-content: space-between;
+        /* justify-content: center; */
+      }
+
+      .dnone {
+        text-align: start;
+        display: flex;
+        /* align-items: center; */
+        flex-direction: column;
+        justify-content: center;
+        align-content: space-between;
+      }
+
+      a {
+        text-decoration: none;
+        color: black; /* Change the color to your preferred color */
+      }
+
+      .closer {
+        align-items: end;
+      }
+
+      .itemend {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .fourd {
+        padding: 3px;
+        box-sizing: border-box;
+        border: 2px solid rgb(35, 35, 35);
+        border-left: 1px solid rgb(35, 35, 35);
+        border-right: 1px solid rgb(35, 35, 35);
+        width: 100%;
+        padding: 3px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .pstyle {
+        font-size: 10px;
+        margin: 3px 0px;
+      }
+
+      th,
+      td {
+        text-align: left;
+        font-weight: normal;
+        font-size: 10px;
+        margin-left: 3px;
+        padding-bottom: 5px;
+        line-height: 8px;
+      }
+
+      th {
+        padding-bottom: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+
+      .secfooter {
+        border-top: 2px solid #f8b133;
+        border-bottom: 2px solid #f8b133;
+      }
+
+      .alicon {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .dend {
+        align-items: center;
+        text-align: end;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* line-height: 10px; */
+      }
+
+      .itemend {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .pleft {
+        padding-left: 5px;
+      }
+
+      /* p{
+                margin: 5px 0px;
+                line-height: 25px;
+            } */
+
+      .br {
+        border-radius: 25px;
+        border: 2px solid black;
+        padding: 3px;
+      }
+
+      h5 {
+        font-size: 40px;
+        margin: 10px 0px;
+      }
+
+      h2 {
+        margin: 10px 0px;
+      }
+
+      .mten {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .stick {
+        display: flex;
+        flex-direction: row;
+        /* align-items: center; */
+      }
+
+      @media only screen and (max-width: 750px) {
+        .position {
+          flex-direction: column;
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+
+        .closer {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          line-height: 8px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        h1 {
+          font-size: 40px;
+        }
+
+        h5 {
+          font-size: 20px;
+        }
+
+        .dnone {
+          text-align: center;
+        }
+        .dend {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div style="width: 100%">
+      <div style="width: 100%">
+        <div class="header">
+          <div class="position" style="border-bottom: 2px solid #f8b133">
+            <div class="dnone closer">
+              <div class="stick">
+                <img
+                  id="est-logo"
+                  src="https://psymate-file-uploads.s3.ap-south-1.amazonaws.com/uploads/Group+(2).png"
+                  height="40px"
+                  style="margin-top: 10px"
+                  alt="Italian Trulli"
+                />
+              </div>
+            </div>
+            <div
+              style="display: flex; flex-direction: column; align-items: end"
+            >
+              <div>
+                <div style="display: flex; gap: 2rem; justify-content: end">
+                  <p style="margin: 3px 0px; font-size: 13px">
+                    <b id="dr-name">Dr. Samant Darshi</b>
+                  </p>
+                  <img
+                    style="width: 3%"
+                    src="https://psymate-file-uploads.s3.ap-south-1.amazonaws.com/location.png"
+                  />
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 2rem;
+                  justify-content: end;
+                "
+              >
+                <div>
+                  <p style="margin: 3px 0px; font-size: 13px" id="dr-degree">
+                    MBBS, MD, cTMS
+                  </p>
+                </div>
+
+                <img
+                  style="width: 3%"
+                  src="https://psymate-file-uploads.s3.ap-south-1.amazonaws.com/phone-call.png"
+                />
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 2rem;
+                  justify-content: end;
+                "
+              >
+                <p style="margin: 3px 0px; font-size: 13px" id="dr-qual">
+                  info@psymate.org
+                </p>
+                <img
+                  style="width: 3%"
+                  src="https://psymate-file-uploads.s3.ap-south-1.amazonaws.com/mail.png"
+                />
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 2rem;
+                  justify-content: end;
+                "
+              >
+                <p style="margin: 3px 0px; font-size: 13px" id="number">
+                  DMC/R/10298
+                </p>
+                <img
+                  style="width: 3%"
+                  src="https://psymate-file-uploads.s3.ap-south-1.amazonaws.com/world-wide-web.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow-x: auto;
+      "
+    >
+      <div class="fourd" style="border-left: 2px solid black">
+        <p class="pstyle">Name</p>
+        <p class="pstyle"><b id="patient-name">Dashrath Singh</b></p>
+      </div>
+      <div class="fourd">
+        <p class="pstyle">Age/Gender</p>
+        <p class="pstyle"><b id="patient-age-gender">42y/ Male</b></p>
+      </div>
+      <div class="fourd">
+        <p class="pstyle">Date</p>
+        <p class="pstyle"><b id="date">11/12/2023</b></p>
+      </div>
+      <div class="fourd" style="border-right: 2px solid black">
+        <p class="pstyle">Reg. Number</p>
+        <p class="pstyle"><b id="patient-psyID"></b></p>
+      </div>
+    </div>
+
+    <div style="margin-top: 15px">
+      <p style="border-left: 4px solid #f8b133; padding: 5px"><b>Rx</b></p>
+    </div>
+
+    <div>
+      <table>
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="secfooter" style="text-align: center">
+      <p style="font-size: 10px">
+        <b>WWW.PSYMATE.ORG| INFO@PSYMATE.ORG|9900383820 </b>
+        <br/>
+        <b>NOIDA | DELHI | GURUGRAM</b>
+      </p>
+    </div>
+
+    <!-- <div class="footer">
+      <p style="margin: 0px; font-size: 10px">
+        <span id="est-website2"> </span> | <span id="est-email2"> </span> |
+        <span id="est-phone2"> </span>
+      </p>
+    </div> -->
+  </body>
+  <script>
+    const data = "Hello";
+    const createdBy = "Noida, Delhi, Gurugram";
+    const patient = "Priya";
+    const company = "Psymate";
+    const date = "16Jan2024";
+    const number = "wwww.psymate.org";
+    document.getElementById("number").innerText = number;
+    document.getElementById("dr-name").innerText = createdBy;
+    document.getElementById("dr-name2").innerText = createdBy;
+    document.getElementById("dr-degree").innerText = "9900383820";
+    document.getElementById("dr-qual").innerText = createdBy.speciality || MBBS;
+    document.getElementById("est-phone").innerText =
+      company.phone || "60606060";
+    document.getElementById("est-phone2").innerText = company.phone || "909009";
+    document.getElementById("est-logo").innerText = company.logo || "--";
+    document.getElementById("est-email").innerText =
+      company.email || "info@gmail.com";
+    document.getElementById("est-email2").innerText =
+      company.email || "info@psymate.org";
+    document.getElementById("est-website").innerText =
+      company.website || "www.psymate.org";
+    document.getElementById("est-website2").innerText = company.website || "--";
+    document.getElementById("patient-name").innerText =
+      patient.displayName || "Priya";
+    document.getElementById("patient-age-gender").innerText =
+      patient.age || "F" + "/" + patient.gender || " -- ";
+    document.getElementById("date").innerText = date;
+    document.getElementById("patient-psyID").innerText = "2020123";
+    const tableBody = document.querySelector("tbody");
+    const theadElement = document.querySelector("thead");
+    const trElement = document.createElement("tr");
+    var tableHeaders = [];
+
+    if (data.type == "prescriptions") {
+      tableHeaders = [
+        "Drug Name",
+        "Dose",
+        "Morning",
+        "Afternoon",
+        "Evening",
+        "Night",
+        "Instruction",
+        "Duration",
+      ];
+      data.items.forEach((data) => {
+        const row = document.createElement("tr");
+        const cell1 = document.createElement("td");
+        const cell2 = document.createElement("td");
+        const cell3 = document.createElement("td");
+        const cell4 = document.createElement("td");
+        const cell5 = document.createElement("td");
+        const cell6 = document.createElement("td");
+        const cell7 = document.createElement("td");
+        const cell8 = document.createElement("td");
+        cell1.innerText = data.displayName || "--";
+        cell2.innerText = data.dosage || "--";
+        cell3.innerText = data.morning || "--";
+        cell4.innerText = data.afternoon || "--";
+        cell5.innerText = data.evening || "--";
+        cell6.innerText = data.night || "--";
+        cell7.innerText = data.instructions || "--";
+        cell8.innerText = data.duration || "--";
+        row.appendChild(cell1);
+        row.appendChild(cell2);
+        row.appendChild(cell3);
+        row.appendChild(cell4);
+        row.appendChild(cell5);
+        row.appendChild(cell6);
+        row.appendChild(cell7);
+        row.appendChild(cell8);
+        tableBody.appendChild(row);
+      });
+    } else if (data.type == "vitalSigns") {
+      tableHeaders = [
+        "Weight",
+        "Blood Pressure",
+        "Pulse",
+        "Resp Rate",
+        "Temperature",
+      ];
+      const row = document.createElement("tr");
+      const cell1 = document.createElement("td");
+      const cell2 = document.createElement("td");
+      const cell3 = document.createElement("td");
+      const cell4 = document.createElement("td");
+      const cell5 = document.createElement("td");
+      cell1.innerText = data.weight || "--";
+      cell2.innerText = data.bloodPressure || "--";
+      cell3.innerText = data.pulse || "--";
+      cell4.innerText = data.respRate || "--";
+      cell5.innerText = data.temperature || "--";
+      row.appendChild(cell1);
+      row.appendChild(cell2);
+      row.appendChild(cell3);
+      row.appendChild(cell4);
+      row.appendChild(cell5);
+      tableBody.appendChild(row);
+    } else if (data.type == "vitalSigns") {
+      tableHeaders = ["Complaints", "Observations", "Diagnoses", "Notes"];
+      const row = document.createElement("tr");
+      const cell1 = document.createElement("td");
+      const cell2 = document.createElement("td");
+      const cell3 = document.createElement("td");
+      const cell4 = document.createElement("td");
+      cell1.innerText = data.complaints || "--";
+      cell2.innerText = data.observations || "--";
+      cell3.innerText = data.diagnoses || "--";
+      cell4.innerText = data.notes || "--";
+      row.appendChild(cell1);
+      row.appendChild(cell2);
+      row.appendChild(cell3);
+      row.appendChild(cell4);
+      tableBody.appendChild(row);
+    }
+
+    tableHeaders.forEach((headerText) => {
+      const thElement = document.createElement("th");
+      thElement.textContent = headerText;
+      trElement.appendChild(thElement);
+    });
+
+    theadElement.appendChild(trElement);
+  </script>
+</html>
